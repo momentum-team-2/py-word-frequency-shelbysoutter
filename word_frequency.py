@@ -33,7 +33,7 @@ def print_word_freq(file):
             word_list.append(word)
     
     organized_words = sorted(word_list, key = str)
-    #   print(split_text)
+
     word_count_list = dict()
     for word in organized_words:
         if word in word_count_list:
@@ -47,18 +47,6 @@ def print_word_freq(file):
     for key, value in sorted_words:
         print(key.rjust(20), " | ", value, value * ("*"))
 
-    # opened_file = open(file)
-    # text = opened_file.read()
-    # words = clean_clean(text).split()
-    # word_list = remove_from_list(words, STOP_WORDS)
-    # word_dict = get_word_dict(word_list)
-    # alpha_dict = dict(sorted(word_dict.items()))
-    # sorted_dict = dict(sorted(alpha_dict.items(), key=get_second_value, reverse=True))
-    # output_list = get_output_list(sorted_dict)
-    # output_word_list =  get_output_word_list(output_list)
-    # longest_word = get_longest_word(output_word_list)
-    # for item in output_list:
-    #     print(f"{get_first_value(item).rjust(len(longest_word) + 2)} | {str(get_second_value(item)).ljust(3)}{get_second_value(item) * '*'}")
 
 
 
