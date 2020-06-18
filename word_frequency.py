@@ -13,7 +13,7 @@ def clean_clean(text):
     word_container = ""
     for character in text:
         if character in letters:
-            word_container += character
+            word_container += ' ' + character
     return word_container
 
 
@@ -21,12 +21,13 @@ def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
     file = open(file)
     text = file.read()
+    
     line_break = text.replace("\n", " ")
+    split_text = line_break.split(' ')
     space_fix = line_break.replace("  ", " ")
     dubdub_dash = space_fix.replace("--", " ")
     cleaned_text = clean_clean(dubdub_dash)
     
-    split_text = cleaned_text.split()
     word_list = []
     for word in split_text:
         if not word in STOP_WORDS:
@@ -66,3 +67,4 @@ if __name__ == "__main__":
         print(f"{file} does not exist!")
         exit(1)
 
+#python word_frequency.py one-today.txt
