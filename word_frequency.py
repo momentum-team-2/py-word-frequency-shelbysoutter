@@ -27,6 +27,7 @@ def print_word_freq(file):
     space_fix = line_break.replace("  ", " ")
     dubdub_dash = space_fix.replace("--", " ")
     cleaned_text = clean_clean(dubdub_dash)
+    print(cleaned_text)
     
     word_list = []
     for word in split_text:
